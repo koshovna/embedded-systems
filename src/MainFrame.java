@@ -125,6 +125,10 @@ public class MainFrame extends JFrame {
 
     // --- Шаг дискретного моделирования системы ---
     private void stepSimulation() {
+        // Чтение
+        try {
+            g = Double.parseDouble(txtG.getText());
+        } catch (Exception ignored) {}
         // Считываем ползунки
         P_priv = sliderPpriv.getValue() / 10.0;
         n = sliderN.getValue() / 10.0;
